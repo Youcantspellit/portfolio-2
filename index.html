@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="sal.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+
 </head>
 
 <body>
@@ -128,6 +133,24 @@
                 </article>
             </div>
         </section>
+        <!-- =======================PORTFOLIO============================= -->
+
+        <section class="portfolio">
+            <div class="headingPortfolio">
+                <h3>
+                    Portfolio
+                </h3>
+            </div>
+
+            <div class="carousel">
+                <div><img src="star.png" alt="star"></div>
+                <div><img src="star.png" alt="star"></div>
+                <div><img src="star.png" alt="star"></div>
+
+            </div>
+
+        </section>
+
         <!-- ==================SCHOOL ================================ -->
         <section class="school">
             <div class="headingSchool">
@@ -158,15 +181,15 @@
                         CAPITOL THEATER BETRIEBS
                         Düsseldorf, Germany</p>
                 </div>
-                <!-- <div class="midStar"></div> -->
-                <div class="capitolDuration right">
+                <div class="midStar" id="star1"></div>
+                <div class="capitolDuration right duration">
                     <h5>2017-now</h5>
                 </div>
 
-                <div class="netinfoDuration left">
+                <div class="netinfoDuration left duration">
                     <h5>2016</h5>
                 </div>
-                <!-- <div class="midStar"></div> -->
+                <div class="midStar" id="star2"></div>
                 <div class="netinfo right">
                     <h5>ONLINE EDITOR</h5>
                     <p>Content editing Custom Platform
@@ -181,14 +204,16 @@
                         TELESHOP BULGARIA
                         Sofia, Bulgaria</p>
                 </div>
-                <!-- <div class="midStar"></div> -->
-                <div class="teleshopDuration right">
-                    <h5>2014-2015</h5>
+                <div class="midStar" id="star3"></div>
+                <div class="teleshopDuration right duration">
+                    <h5>2014 - 2015</h5>
                 </div>
-                <div class="teleshopDuration left">
-                    <h5>2009-2014</h5>
+
+
+                <div class="teleshop2Duration left duration">
+                    <h5>2009 - 2014</h5>
                 </div>
-                <!-- <div class="midStar"></div> -->
+                <div class="midStar" id="star4"></div>
                 <div class="teleshop-2 right">
                     <h5>CALL ASSISTANT</h5>
                     <p>Customer Contact Data entry into specialized software
@@ -200,16 +225,18 @@
         </section>
 
 
-
-
     </div>
 
 
     <!-- ===================SCRIPTS ================================ -->
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="sal.js"></script>
+    <!-- ------------------------slickscript------------------------ -->
+    <script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+    <!-- -------------------------------------------------------- -->
     <script>
         sal();
         function myFunction() {
@@ -242,6 +269,24 @@
             // text.classList.remove("hidden");
 
         })
+
+        $(document).ready(function () {
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                swipeToSlide: true,
+                touchMove: true,
+                ltr: true,
+                infinite: true,
+                variableWidth: true,
+                dots: false,
+                pauseOnHover: true
+            });
+        });
+
+
+
     </script>
 </body>
 
