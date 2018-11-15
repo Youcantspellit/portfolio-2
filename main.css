@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400");
+@font-face {
+  font-family: myFirstFont;
+  src: url(Agency.ttf);
+}
+
+/* initial-letter */
+body {
+  color: #333;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: 0;
+}
+
+.bg {
+  position: absolute;
+  background: url(bg.png);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  -webkit-transition: color 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transition: color 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+/* .social {
+  transition:color 1.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+} */
+h1 {
+  font-family: myFirstFont;
+  text-transform: uppercase;
+  font-size: 7rem;
+  line-height: 0.3rem;
+  font-weight: lighter;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-family: myFirstFont;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: lighter;
+  line-height: 0.3rem;
+  letter-spacing: -1px;
+  margin-bottom: 1.8rem;
+}
+
+main p {
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 120%;
+  line-height: -0.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+main address, span {
+  font-family: 'Muli', sans-serif;
+  font-size: 1rem;
+  font-style: inherit;
+  font-weight: 300;
+  line-height: 120%;
+  line-height: -0.1rem;
+  letter-spacing: 0.075rem;
+  margin-bottom: 0;
+}
+
+main span {
+  letter-spacing: 0.39rem;
+}
+
+.social, a {
+  font-size: 2.83rem;
+  color: white;
+  -webkit-transition: all 3s fade;
+  transition: all 3s fade;
+}
+
+/* ------------------------ARROW-------------------------- */
+.arrow {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 15%;
+  -webkit-animation: arrow-bounce 0.7s;
+          animation: arrow-bounce 0.7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes arrow-bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0);
+  }
+}
+
+@keyframes arrow-bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0);
+  }
+}
+
+button {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  height: 140px;
+  width: 100%;
+  z-index: 999;
+  cursor: pointer;
+  outline: none !important;
+}
+
+/* ------------------------ABOUT-ME-------------------------- */
+.container {
+  max-width: 960px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.aboutMe, .skills {
+  margin: 10%;
+}
+
+.headingAboutMe h3,
+.headingSkills h3,
+.headingSchool h3,
+.headingExperience h3 {
+  padding-bottom: 1.2rem;
+}
+
+.headingAboutMe,
+.headingSkills,
+.headingSchool,
+.headingExperience {
+  display: inline-block;
+  background: url(star.svg) repeat-x center bottom;
+  background-size: 1.08rem;
+}
+
+.aboutMe:hover .headingAboutMe,
+.skills:hover .headingSkills,
+.school:hover .headingSchool,
+.experience:hover .headingExperience {
+  background: url(star-yellow.svg) repeat-x center bottom;
+  background-size: 1.08rem;
+}
+
+.aboutMe p {
+  font-family: 'Muli', sans-serif;
+  padding: 2rem 0;
+}
+
+/* ------------------------SKILLS-------------------------- */
+.skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.headingSkills {
+  margin-left: 23px;
+}
+
+.skillsContainer h5,
+.experienceContainer h5 {
+  font-family: myFirstFont;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.skillsContainer ul {
+  font-family: 'Muli', sans-serif;
+  list-style: none;
+}
+
+.skillsLeft ul {
+  padding-right: 30px;
+  border-right: 1px dashed #333;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+
+.skillsRight ul {
+  padding-left: 30px;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+
+.skillsLeft,
+.skillsLeft h5 {
+  text-align: right;
+}
+
+.skillsRight,
+.skillsRight h5 {
+  text-align: left;
+}
+
+.skillsLeft h5 {
+  padding-right: 30px;
+  margin-bottom: 0;
+}
+
+.skillsRight h5 {
+  padding-left: 30px;
+  margin-bottom: 0;
+}
+
+.skillsLeft li:nth-child(1n+9) {
+  text-decoration: line-through;
+}
+
+.skills {
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  top: 157px;
+  left: 51.6%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  overflow: hidden;
+  color: #333;
+  font-size: 24px;
+  background-image: url(star.svg);
+}
+
+.skills:hover .star {
+  background-image: url(star-yellow.svg);
+}
+
+/* -------------------------SCHOOL--------------------- */
+.school {
+  margin-top: 7rem;
+}
+
+.schoolContainer {
+  margin: 5% 10%;
+}
+
+.school span {
+  font-weight: bold;
+}
+
+/* -------------------------EXPERIENCE--------------------- */
+.experience {
+  margin-top: 7rem;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+}
+
+.headingExperience {
+  margin-bottom: 4rem;
+}
+
+.experienceContainer {
+  /*  display:flex;
+  flex-flow: row wrap; */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.experienceContainer div {
+  /*  display: inline-block; */
+  /*  width: 40%; */
+  /*  display: block; */
+}
+
+.experienceContainer .left {
+  text-align: right;
+  padding-right: 30px;
+  border-right: 1px dashed #333;
+}
+
+.experienceContainer .right {
+  text-align: left;
+  padding-left: 30px;
+}
+/*# sourceMappingURL=main.css.map */
